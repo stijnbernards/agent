@@ -26,10 +26,6 @@ Main (unreleased)
     - renamed 3 metrics starting with `mysql_perf_schema_transaction_` to start with `mysql_perf_schema_transactions_` to be consistent with column names.
     - exposing only server's own stats by matching `MEMBER_ID` with `@@server_uuid` resulting "member_id" label to be dropped.
 
-### Other changes
-
-- Bump `mysqld_exporter` version to v0.15.0. (@marctc)
-
 ### Features
 
 - Added a new `stage.decolorize` stage to `loki.process` component which 
@@ -40,6 +36,12 @@ Main (unreleased)
 
 - Added a new `stage.eventlogmessage` stage to `loki.process` component which
   allows to extract data from Windows Event Log. (@thampiotr)
+
+### Enhancements
+
+- The `loki.write` WAL now has snappy compression enabled by default. (@thepalbi)
+
+- Allow converting labels to structured metadata with Loki's structured_metadata stage. (@gonzalesraul)
 
 ### Bugfixes
 
@@ -53,11 +55,11 @@ Main (unreleased)
 
 - Fixed an issue where native histogram time series were being dropped silently.  (@krajorama)
 
-### Enhancements
+### Other changes
 
-- The `loki.write` WAL now has snappy compression enabled by default. (@thepalbi)
+- Bump `mysqld_exporter` version to v0.15.0. (@marctc)
 
-- Allow converting labels to structured metadata with Loki's structured_metadata stage. (@gonzalesraul)
+- Change the Docker base image for Linux containers to ubuntu:mantic. (@ptodev)
 
 v0.37.2 (2023-10-16)
 -----------------
