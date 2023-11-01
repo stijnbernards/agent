@@ -118,6 +118,9 @@ Main (unreleased)
 
 - Support clustering in `loki.source.podlogs` (@rfratto).
 
+- Added Kubernetes service resolver to static node's loadbalancing exporter 
+  and to Flow's `otelcol.exporter.loadbalancing`. (@ptodev)
+
 v0.37.3 (2023-10-26)
 -----------------
 
