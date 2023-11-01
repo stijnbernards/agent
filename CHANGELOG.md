@@ -94,6 +94,9 @@ Main (unreleased)
 
 - Include Faro Measurement `type` field in `faro.receiver` Flow component and legacy `app_agent_receiver` integration. (@rlankfo)
 
+- Fix a bug which prevented Agent from running `otelcol.exporter.loadbalancing` 
+  with a `routing_key` of `traceID`. (@ptodev)
+
 ### Enhancements
 
 - The `loki.write` WAL now has snappy compression enabled by default. (@thepalbi)
