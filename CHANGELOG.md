@@ -130,6 +130,10 @@ Main (unreleased)
 - Adds new metrics (`mssql_server_total_memory_bytes`, `mssql_server_target_memory_bytes`,
   and `mssql_available_commit_memory_bytes`) for `mssql` integration.
 
+- Azure exporter enhancements for flow and static mode, (@kgeckhart)
+  - Allows for pulling metrics at the Azure subscription level instead of resource by resource 
+  - Disable dimension validation by default to reduce the number of exporter instances needed for full dimension coverage 
+
 v0.37.3 (2023-10-26)
 -----------------
 
