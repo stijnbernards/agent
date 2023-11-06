@@ -128,6 +128,8 @@ Main (unreleased)
 
 - Include Faro Measurement `type` field in `faro.receiver` Flow component and legacy `app_agent_receiver` integration. (@rlankfo)
 
+- - Mark `password` argument of `loki.source.kafka` as a `secret` rather than a `string`. (@harsiddhdave44)
+
 - Fix a bug which prevented Agent from running `otelcol.exporter.loadbalancing` 
   with a `routing_key` of `traceID`. (@ptodev)
 
